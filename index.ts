@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import conectarBD from './db/db';
 import { UserModel } from './models/user';
 import { Enum_Rol } from './models/enums';

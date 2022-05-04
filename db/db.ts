@@ -2,7 +2,7 @@ import { connect } from 'mongoose';
 
 const conectarBD = async () => {
   return await connect(
-    'mongodb+srv://Admin:sJf0VmCsBjrgFJMP@cluster0.tvkid.mongodb.net/gestionProyectos?retryWrites=true&w=majority'
+    process.env.DB_URL
   ).then(()=>{
     console.log("BD conectada")
   }).catch((e) =>{
