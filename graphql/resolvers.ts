@@ -53,6 +53,7 @@ const resolvers = {
       return deletedUser;
     },
 
+    
     crearProyecto:async (parent,args) => {
       const createdProject = await ProjectModel.create({
         nombre: args.nombre,
