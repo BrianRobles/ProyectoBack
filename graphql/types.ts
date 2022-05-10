@@ -1,5 +1,7 @@
 import { gql } from 'apollo-server-express';
 
+//comment 
+
 const typeDefs = gql`
   enum Enum_EstadoUsuario {
     PENDIENTE
