@@ -11,7 +11,7 @@ const advanceTypes = gql`
   }
 
   type Query {
-    Avances: [Avances]
+    Avances: [Avance]
   }
 
   type Mutation {
