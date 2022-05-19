@@ -4,6 +4,7 @@ import { userTypes } from '../models/user/types';
 import { projectTypes } from '../models/project/types';
 import { advanceTypes } from '../models/advance/types';
 import { inscriptionTypes } from '../models/inscription/types';
+import { objectiveTypes } from '../models/objective/types';
 
 const globalTypes = gql`
   scalar Date
@@ -15,5 +16,6 @@ export const typeDefs = [
   userTypes,
   projectTypes,
   advanceTypes,
-  inscriptionTypes
+  inscriptionTypes,
+  objectiveTypes,
 ];

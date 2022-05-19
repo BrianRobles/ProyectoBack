@@ -14,7 +14,7 @@ interface Project {
   estado: Enum_EstadoProyecto;
   fase: Enum_FaseProyecto;
   lider: Schema.Types.ObjectId;
-  objetivos: [{ descripcion: String; tipo: Enum_TipoObjetivo }];
+  // objetivos: [{ descripcion: String; tipo: Enum_TipoObjetivo }];
 }
 
 const projectSchema = new Schema<Project>(
@@ -50,19 +50,19 @@ const projectSchema = new Schema<Project>(
       required: true,
       ref: UserModel,
     },
-    objetivos: [
-      {
-        descripcion: {
-          type: String,
-          required: true,
-        },
-        tipo: {
-          type: String,
-          enum: Enum_TipoObjetivo,
-          required: true,
-        },
-      },
-    ],
+    // objetivos: [
+    //   {
+    //     descripcion: {
+    //       type: String,
+    //       required: true,
+    //     },
+    //     tipo: {
+    //       type: String,
+    //       enum: Enum_TipoObjetivo,
+    //       required: true,
+    //     },
+    //   },
+    // ],
   },
   {
     toJSON: { virtuals: true },
@@ -81,6 +81,12 @@ projectSchema.virtual('inscripciones', {
   localField: '_id',
   foreignField: 'proyecto',
 });
+
+projectSchema.virtual('objetivos',{
+  ref: 'Objective',
+  localField: '_id',
+  foreignField: 'proyecto'
+})
 
 const ProjectModel = model('Project', projectSchema);
 
