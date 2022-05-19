@@ -19,7 +19,7 @@ enum Enum_FaseProyecto {
   INICIADO = 'INICIADO',
   DESARROLLO = 'DESARROLLO',
   TERMINADO = 'TERMINADO',
-  NULA = '',
+  NULA = 'NULA',
 }
 
 enum Enum_TipoObjetivo {
