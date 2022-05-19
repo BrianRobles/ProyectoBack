@@ -14,16 +14,15 @@ interface Inscription {
 const inscriptionSchema = new Schema<Inscription>({
   fechaIngreso: {
     type: Date,
-    required: true,
   },
   fechaEgreso: {
     type: Date,
-    required: true,
   },
   estado: {
     type: String,
     required: true,
     enum: Enum_EstadoInscripcion,
+    default: Enum_EstadoInscripcion.PENDIENTE,
   },
   proyecto: {
     type: Schema.Types.ObjectId,

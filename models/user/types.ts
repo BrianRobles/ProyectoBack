@@ -24,17 +24,17 @@ const userTypes = gql`
       correo: String!
       identificacion: String!
       rol: Enum_Rol!
-      estado: Enum_EstadoUsuario!
+      estado: Enum_EstadoUsuario
     ): Usuario
 
     editarUsuario(
       _id: String!
-      nombre: String!
-      apellido: String!
-      correo: String!
-      identificacion: String!
-      rol: Enum_Rol!
-      estado: Enum_EstadoUsuario!
+      nombre: String
+      apellido: String
+      correo: String
+      identificacion: String
+      rol: Enum_Rol
+      estado: Enum_EstadoUsuario
     ): Usuario
 
     eliminarUsuario(_id: String!): Usuario
