@@ -3,7 +3,10 @@ import { UserModel } from './user';
 const userResolvers = {
   Query: {
     Usuarios: async (parent, args) => {
-      const users = await UserModel.find();
+      const users = await UserModel.find()
+        .populate('proyectos')
+        .populate('avances')
+        .populate('inscripciones');
       return users;
     },
 

@@ -10,6 +10,9 @@ const userTypes = gql`
     apellido: String!
     rol: Enum_Rol!
     estado: Enum_EstadoUsuario
+    proyectos: [Proyecto]
+    avances: [Avance]
+    inscripciones: [Inscripcion]
   }
 
   type Query {

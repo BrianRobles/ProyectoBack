@@ -29,7 +29,6 @@ const projectTypes = gql`
       estado: Enum_EstadoProyecto!
       fase: Enum_FaseProyecto!
       lider: String!
-      objetivos: [String]
     ): Proyecto
 
     editarProyecto(
@@ -41,7 +40,6 @@ const projectTypes = gql`
       estado: Enum_EstadoProyecto
       fase: Enum_FaseProyecto
       lider: String
-      objetivos: [String]
     ): Proyecto
 
     eliminarProyecto(_id: String): Proyecto

@@ -6,7 +6,8 @@ const projectResolvers = {
       const projects = await ProjectModel.find()
         .populate('lider')
         .populate('avances')
-        .populate('inscripciones');
+        .populate('inscripciones')
+        .populate('objetivos');
       return projects;
     },
   },
@@ -21,7 +22,6 @@ const projectResolvers = {
         fase: args.fase,
         estado: args.estado,
         lider: args.lider,
-        objetivos: args.objetivos,
       });
       return createdProject;
     },
@@ -37,7 +37,6 @@ const projectResolvers = {
           estado: args.estado,
           fase: args.fase,
           lider: args.fase,
-          objetivos: args.objetivos,
         },
         { new: true }
       );
