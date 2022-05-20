@@ -16,6 +16,22 @@ const objectiveResolvers = {
         proyecto: args.proyecto,
       });
     },
+
+    editarDescripcionObjetivo: async (parent, args) => {
+      const editedObjective = ObjectiveModel.findByIdAndUpdate(
+        args._id,
+        {
+          descripcion: args.descripcion,
+        },
+        { new: true }
+      );
+      return editedObjective;
+    },
+
+    eliminarObjetivo: async (parent, args) => {
+      const deletedObjective = ObjectiveModel.findByIdAndDelete(args._id);
+      return deletedObjective;
+    },
   },
 };
 

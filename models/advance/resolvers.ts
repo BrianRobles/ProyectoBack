@@ -20,7 +20,7 @@ const advanceResolvers = {
       return createdAvance;
     },
 
-    editarDescripcion: async (parent, args) => {
+    editarDescripcionAvance: async (parent, args) => {
       const editedAdvance = AdvanceModel.findByIdAndUpdate(
         args._id,
         {

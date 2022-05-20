@@ -25,6 +25,29 @@ const projectResolvers = {
       });
       return createdProject;
     },
+
+    editarProyecto: async (parent, args) => {
+      const editedProject = ProjectModel.findByIdAndUpdate(
+        args._id,
+        {
+          nombre: args.nombre,
+          presupuesto: args.presupuesto,
+          fechaInicio: args.fechaInicio,
+          fechaFin: args.fechaFin,
+          estado: args.estado,
+          fase: args.fase,
+          lider: args.fase,
+          objetivos: args.objetivos,
+        },
+        { new: true }
+      );
+      return editedProject;
+    },
+
+    eliminarProyecto: async (parent, args) => {
+      const deletedProject = ProjectModel.findByIdAndDelete(args._id);
+      return deletedProject;
+    },
   },
 };
 

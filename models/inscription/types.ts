@@ -23,6 +23,14 @@ const inscriptionTypes = gql`
     aprobarInscripcion(
       _id: String!
     ): Inscripcion
+
+    rechazarInscripcion(
+      _id: String!
+    ): Inscripcion
+
+    eliminarInscripcion(
+      _id: String!
+    ): Inscripcion
   }
 `;
 

@@ -31,6 +31,22 @@ const inscriptionResolvers = {
       );
       return approvedInscription;
     },
+
+    rechazarInscripcion: async (parent, args) => {
+      const rejectedInscription = InscriptionModel.findByIdAndUpdate(
+        args._id,
+        {
+          estado: Enum_EstadoInscripcion.RECHAZADA,
+        },
+        { new: true }
+      );
+      return rejectedInscription;
+    },
+
+    eliminarInscripcion: async (parent, args) => {
+      const deletedInscription = InscriptionModel.findByIdAndDelete(args._id);
+      return deletedInscription;
+    },
   },
 };
 

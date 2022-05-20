@@ -21,7 +21,7 @@ const advanceTypes = gql`
       creadoPor: String!
     ): Avance
 
-    editarDescripcion(
+    editarDescripcionAvance(
       _id: String!
       descripcion: String!
     ): Avance

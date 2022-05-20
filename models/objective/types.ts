@@ -18,6 +18,10 @@ const objectiveTypes = gql`
       tipo: Enum_TipoObjetivo!
       proyecto: ID!
     ): Objetivo
+
+    editarDescripcionObjetivo(_id: String!, descripcion: String!): Objetivo
+
+    eliminarObjetivo(_id: String!): Objetivo
   }
 `;
 
