@@ -15,6 +15,7 @@ const objectiveResolvers = {
         tipo: args.tipo,
         proyecto: args.proyecto,
       });
+      return createdObjective;
     },
 
     editarDescripcionObjetivo: async (parent, args) => {
