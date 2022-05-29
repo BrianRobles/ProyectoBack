@@ -6,10 +6,10 @@ var jwtCheck = jwt.expressjwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: 'https://dev-wdjyode0.us.auth0.com/.well-known/jwks.json',
+    jwksUri: 'https://gestionproyectos.us.auth0.com/.well-known/jwks.json',
   }),
   audience: 'https://gestion-proyectos/graphql',
-  issuer: 'https://dev-wdjyode0.us.auth0.com/',
+  issuer: 'https://gestionproyectos.us.auth0.com/',
   algorithms: ['RS256'],
 });
 
