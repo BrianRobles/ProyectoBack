@@ -21,8 +21,6 @@ const userResolvers = {
       const createdUser = await UserModel.create({
         nombre: args.nombre,
         apellido: args.apellido,
-        identificacion: args.identificacion,
-        correo: args.correo,
         rol: args.rol,
       });
       return createdUser;
@@ -34,8 +32,6 @@ const userResolvers = {
         {
           nombre: args.nombre,
           apellido: args.apellido,
-          identificacion: args.identificacion,
-          correo: args.correo,
           rol: args.rol,
           estado: args.estado,
         },

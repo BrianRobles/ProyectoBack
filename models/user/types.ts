@@ -1,11 +1,8 @@
 import { gql } from 'apollo-server-express';
 
 const userTypes = gql`
-
   type Usuario {
     _id: ID!
-    correo: String!
-    identificacion: String!
     nombre: String!
     apellido: String!
     rol: Enum_Rol!
@@ -24,8 +21,6 @@ const userTypes = gql`
     crearUsuario(
       nombre: String!
       apellido: String!
-      correo: String!
-      identificacion: String!
       rol: Enum_Rol!
       estado: Enum_EstadoUsuario
     ): Usuario
@@ -34,8 +29,6 @@ const userTypes = gql`
       _id: String!
       nombre: String
       apellido: String
-      correo: String
-      identificacion: String
       rol: Enum_Rol
       estado: Enum_EstadoUsuario
     ): Usuario
