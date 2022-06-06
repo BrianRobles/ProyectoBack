@@ -5,6 +5,7 @@ const userTypes = gql`
     _id: ID!
     nombre: String!
     apellido: String!
+    correo: String!
     rol: Enum_Rol!
     estado: Enum_EstadoUsuario
     proyectos: [Proyecto]
@@ -21,6 +22,7 @@ const userTypes = gql`
     crearUsuario(
       nombre: String!
       apellido: String!
+      correo: String!
       rol: Enum_Rol!
       estado: Enum_EstadoUsuario
     ): Usuario
@@ -29,6 +31,7 @@ const userTypes = gql`
       _id: String!
       nombre: String
       apellido: String
+      correo: String
       rol: Enum_Rol
       estado: Enum_EstadoUsuario
     ): Usuario
