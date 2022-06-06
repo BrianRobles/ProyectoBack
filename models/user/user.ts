@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { Enum_EstadoUsuario, Enum_Rol } from '../enums/enums';
+import uniqueValidator from 'mongoose-unique-validator';
 
 interface User {
   nombre: string;
@@ -41,6 +42,8 @@ const userSchema = new Schema<User>(
     toObject: { virtuals: true },
   }
 );
+
+userSchema.plugin(uniqueValidator);
 
 userSchema.virtual('proyectos', {
   ref: 'Project',
